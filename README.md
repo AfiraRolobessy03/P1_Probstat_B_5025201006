@@ -72,7 +72,7 @@ hasil
 
 ![](https://github.com/AfiraRolobessy03/ss/blob/main/e.JPG)
 
-#### Soal 1
+#### Soal 2
 Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
 
 A. Peluang terdapat 4 pasien yang sembuh.
@@ -116,6 +116,141 @@ vrian=cvid*x*(1-x)
 vrian
 ```
 ![](https://github.com/AfiraRolobessy03/ss/blob/main/2%20c.JPG)
+
+#### Soal 3
+Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis
+4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
+
+A. Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+
+```r 
+y = 6
+rata = 4.5
+dpois(y,rata)
+```
+hasil 
+```r 
+> y = 6
+> rata = 4.5
+> dpois(y,rata)
+[1] 0.1281201
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/3%20a.JPG)
+
+B. simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama
+setahun (n = 365)
+```r 
+y = 365
+hist(dpois(y, rata), main = "Histogram")
+```
+hasil 
+![](https://github.com/AfiraRolobessy03/ss/blob/main/Screenshot%20(326).png)
+
+C. dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+kesimpilan yang saya dapat poin a menggambarkan hasil bayi akan lahir berpeluang 0.1281201
+sedangkan poin b menggambarkan hasil Histogram simulasi kelahiran bayi 365
+
+D. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+```r 
+mean = var = lambda
+mean
+var
+```
+hasil
+```r 
+> mean = var = rata
+> mean
+[1] 4.5
+> var
+[1] 4.5
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/3%20akhir.png)
+
+#### Soal 4
+Diketahui nilai x = 2 dan v = 10. Tentukan:
+
+A. Fungsi Probabilitas dari Distribusi Chi-Square.
+```r 
+x = 2
+y = 10
+stat = dchisq(x,y)
+stat
+```
+hasil
+```r 
+> x = 2
+> y = 10
+> stat = dchisq(x,y)
+> stat
+[1] 0.007664155
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/4%20a.JPG)
+
+B. Histogram dari Distribusi Chi-Square dengan 100 data random.
+```r
+n = 100
+hist(rchisq(x,y),xlab = "x", ylab = "y", main = "Grafik HIstogram")
+
+```
+hasil
+![](https://github.com/AfiraRolobessy03/ss/blob/main/4%20b.JPG)
+
+C. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square.
+```r
+mean = y
+vrian = 2*y
+mean
+vrian
+```
+hasil
+```r
+> mean = y
+> vrian = 2*y
+> mean
+[1] 10
+> vrian
+[1] 20
+```
+![](https://github.com/AfiraRolobessy03/ss)
+
+#### Soal 5
+Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
+
+a. Fungsi Probabilitas dari Distribusi Exponensial
+```r 
+probstat = 3
+rexp(10,rate = probstat)
+
+```
+hasil
+```r 
+> probstat = 3
+> rexp(10,rate = probstat)
+ [1] 0.3025039 0.3170566 0.3692072 0.4141648 0.1604637 0.1765985 0.2971135 0.4361808
+ [9] 0.1939910 0.1920394
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/5a.JPG)
+b. Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+```r 
+set.seed(1)
+hist(rexp(10, rate = probstat), 
+     main = "Histogram Eksponensial dengan 10 Generasi Acak")
+hist(rexp(100, rate = probstat), 
+     main = "Histogram Eksponensial dengan 100 Generasi Acak")
+hist(rexp(1000, rate = probstat), 
+     main = "Histogram Eksponensial dengan 1000 Generasi Acak")
+hist(rexp(10000, rate = probstat), 
+     main = "Histogram Eksponensial dengan 10 Generasi Acak")
+
+```
+hasil
+![](https://github.com/AfiraRolobessy03/ss/blob/main/5b.JPG)
+
+c. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+Petunjuk:
+● Gunakan set.seed(1)
+● Gunakan fungsi bawaan R
+
 |Nama                    | NRP             |
 |------------------------|-----------------|
 |Afira Rolobessy         |5025201006       |
