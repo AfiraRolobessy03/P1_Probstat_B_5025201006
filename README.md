@@ -72,9 +72,50 @@ hasil
 
 ![](https://github.com/AfiraRolobessy03/ss/blob/main/e.JPG)
 
+#### Soal 1
+Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
 
+A. Peluang terdapat 4 pasien yang sembuh.
+```r 
+cvid=20
+x =0.2
+sembuh =4
+pluang=dbinom(sembuh,cvid,x,log=FALSE)
+pluang
+```
+hasil
+```r 
+> cvid=20
+> x =0.2
+> sembuh =4
+> pluang=dbinom(sembuh,cvid,x,log=FALSE)
+> pluang
+[1] 0.2181994
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/2%20a.JPG)
 
+B. Gambarkan grafik histogram berdasarkan kasus tersebut.
+```r 
+hist(rbinom(sembuh,cvid,x),xlab="x",ylab ="Frekuensi",main ="Histogram of Binomial")
+```
+hasil
+![](https://github.com/AfiraRolobessy03/ss/blob/main/2%20b.JPG)
 
+C. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+```r 
+rata=cvid*x
+rata
+vrian=cvid*x*(1-x)
+vrian
+```
+hasil
+```r 
+rata=cvid*x
+rata
+vrian=cvid*x*(1-x)
+vrian
+```
+![](https://github.com/AfiraRolobessy03/ss/blob/main/2%20c.JPG)
 |Nama                    | NRP             |
 |------------------------|-----------------|
 |Afira Rolobessy         |5025201006       |
